@@ -13,7 +13,7 @@ def measure_speed():
     now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
     print(f"[{now}] Performing Speedtest...")
 
-    speed_test = st.Speedtest()
+    speed_test = st.Speedtest(secure=True)
     speed_test.get_best_server()
 
     print("\tPing...", end=" ")
